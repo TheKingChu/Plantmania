@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plant_SO : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+[CreateAssetMenu(fileName = "New Plant", menuName = "Plant Creation")]
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public class Plant_SO : ScriptableObject
+{
+    public string plantName;
+    public int maxHealth;
+
+    public int defence;
+    public int attack;
+
+    public Material newMaterial;
+    public Sprite sprite;
 }

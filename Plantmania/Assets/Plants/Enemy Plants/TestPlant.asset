@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01dee00e3926cfa4cbf3c2ab8f1f0581, type: 3}
+  m_Name: TestPlant
+  m_EditorClassIdentifier: 
+  plantName: TestPlant
+  maxHealth: 1
+  defence: 0
+  attack: 0
+  newMaterial: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+  sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
