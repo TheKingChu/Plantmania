@@ -12,6 +12,7 @@ public class Seeds : MonoBehaviour
 
     public void SelectedSeed()
     {
+
         Debug.Log("Working");
     }
 }
