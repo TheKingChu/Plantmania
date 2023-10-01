@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    //for player movement
     private Vector2 movement;
     private Rigidbody2D rb;
     [SerializeField] private int speed = 5;

@@ -160,3 +160,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seedItem: {fileID: 1143657413044896468, guid: 967a02569a359154094f4fbd435059f0, type: 3}
+  image: {fileID: 3747839879313124085, guid: 967a02569a359154094f4fbd435059f0, type: 3}
