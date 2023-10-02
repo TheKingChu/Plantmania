@@ -13,6 +13,8 @@ public class Spawn : MonoBehaviour
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
+    
+
     public void SpawnDroppedItem()
     {
         Vector2 playerPosition = new Vector2(playerTransform.position.x, playerTransform.position.y + 2);

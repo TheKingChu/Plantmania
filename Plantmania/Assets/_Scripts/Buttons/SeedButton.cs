@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SeedButton : MonoBehaviour
 {
     public GameObject seedItem;
     public SpriteRenderer image;
     Camera cam;
+
 
     private void Awake()
     {
@@ -31,6 +33,4 @@ public class SeedButton : MonoBehaviour
         Instantiate(seedItem, cursorPosition, Quaternion.identity);
         Destroy(gameObject);
     }
-
-    
 }
