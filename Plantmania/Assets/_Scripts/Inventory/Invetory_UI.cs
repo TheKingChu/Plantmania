@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class Invetory_UI : MonoBehaviour
 {
+    public GameObject inventoryPanel;
     public PlayerManager player;
     public List<Slot_UI> slots = new List<Slot_UI>();
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Tab))
         {
+            ToggleInventory();
+        }
+    }
 
+    public void ToggleInventory()
+    {
+        if(!inventoryPanel.activeSelf)
+        {
+            inventoryPanel.SetActive(true);
+            Refresh();
+        }
+        else
+        {
+            inventoryPanel.SetActive(false);
         }
     }
 

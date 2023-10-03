@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
-        inventory = new Inventory(21); //creates a X slot inventory
+        inventory = new Inventory(15); //creates a X slot inventory
     }
 
     private void Update()
@@ -31,6 +31,6 @@ public class PlayerManager : MonoBehaviour
 
         Item droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
 
-        droppedItem.rb2d.AddForce(spawnOffset * 0.2f, ForceMode2D.Impulse);
+        droppedItem.rb2d.AddForce(spawnOffset * 0.02f, ForceMode2D.Impulse);
     }
 }

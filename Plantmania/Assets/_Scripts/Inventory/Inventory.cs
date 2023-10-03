@@ -21,7 +21,7 @@ public class Inventory
             maxStack = 99; //can be changed
         }
 
-        public bool IsCollectable()
+        public bool CanAddItem()
         {
             if(count < maxStack)
             {
@@ -34,8 +34,8 @@ public class Inventory
 
         public void AddItem(Item item)
         {
-            this.itemName = item.itemData.itemName;
-            this.icon = item.itemData.icon;
+            this.itemName = item.data.itemName;
+            this.icon = item.data.icon;
             count++;
         }
 
@@ -66,14 +66,14 @@ public class Inventory
         }
     }
 
-    public void Add(Item itemToAdd)
+    public void Add(Item item)
     {
         //if there already is a item of that type add to the stack
         foreach (Slot slot in slots)
         {
-            if(slot.itemName == itemToAdd.itemData.itemName && slot.IsCollectable())
+            if(slot.itemName == item.data.itemName && slot.CanAddItem())
             {
-                slot.AddItem(itemToAdd);
+                slot.AddItem(item);
                 return;
             }
         }
@@ -83,7 +83,7 @@ public class Inventory
         {
             if(slot.itemName == "")
             {
-                slot.AddItem(itemToAdd);
+                slot.AddItem(item);
                 return;
             }
         }

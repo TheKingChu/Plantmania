@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Item : MonoBehaviour
 {
-    public ItemData_SO itemData;
+    public ItemData_SO data;
     [HideInInspector] public Rigidbody2D rb2d;
 
     private void Awake()
@@ -13,15 +13,5 @@ public class Item : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

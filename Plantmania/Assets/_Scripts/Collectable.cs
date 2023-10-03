@@ -5,15 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(Item))]
 public class Collectable : MonoBehaviour
 {
-    PlayerManager player;
-
-    private void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
-    }  
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        PlayerManager player = collision.GetComponent<PlayerManager>();
+
         if (player)
         {
             Item item = GetComponent<Item>();

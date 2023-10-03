@@ -24,7 +24,7 @@ public class Slot_UI : MonoBehaviour
     {
         itemIcon.sprite = null;
         itemIcon.color = new Color(1, 1, 1, 0);
-        quantityText.text= string.Empty;
+        quantityText.text= "";
     }
 
     public void SetHighlight(bool isOn)
