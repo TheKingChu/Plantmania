@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public Inventory inventory, toolbar;
+    public InventoryManager inventoryManager;
 
     private void Awake()
     {
-        inventory = new Inventory(15); //creates a X slot inventory
-        toolbar = new Inventory(9); //creates a X slot in the toolbar/hotbar
+        inventoryManager = GetComponent<InventoryManager>();
     }
 
     private void Update()

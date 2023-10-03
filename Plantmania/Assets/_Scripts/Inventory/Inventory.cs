@@ -125,16 +125,18 @@ public class Inventory
         }
     }
 
-    public void MoveSlot(int fromIndex, int toIndex)
+    public void MoveSlot(int fromIndex, int toIndex, Inventory toInvetory, int numToMove = 1)
     {
         Slot fromSlot = slots[fromIndex];
-        Slot toSlot = slots[toIndex];
+        Slot toSlot = toInvetory.slots[toIndex];
 
         if(toSlot.IsEmpty || toSlot.CanAddItem(fromSlot.itemName))
         {
-            toSlot.AddItem(fromSlot.itemName, fromSlot.icon, fromSlot.maxStack);
-
-            fromSlot.RemoveItem();
+            for (int i = 0; i < numToMove; i++)
+            {
+                toSlot.AddItem(fromSlot.itemName, fromSlot.icon, fromSlot.maxStack);
+                fromSlot.RemoveItem();
+            }
         }
     }
 }
