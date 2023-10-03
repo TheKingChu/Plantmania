@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public Inventory inventory;
+    public Inventory inventory, toolbar;
 
     private void Awake()
     {
         inventory = new Inventory(15); //creates a X slot inventory
+        toolbar = new Inventory(9); //creates a X slot in the toolbar/hotbar
     }
 
     private void Update()
@@ -32,5 +33,13 @@ public class PlayerManager : MonoBehaviour
         Item droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
 
         droppedItem.rb2d.AddForce(spawnOffset * 0.02f, ForceMode2D.Impulse);
+    }
+
+    public void DropItem(Item item, int numToDrop)
+    {
+        for (int i = 0; i < numToDrop; i++)
+        {
+            DropItem(item);
+        }
     }
 }

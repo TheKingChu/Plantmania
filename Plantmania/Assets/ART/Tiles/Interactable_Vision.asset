@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Interactable_Vision
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: 45f6b1f14d6984f4aab733b73dae34c9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.09803922}
   m_Transform:
     e00: 1
     e01: 0
