@@ -6,13 +6,16 @@ public enum CollectableType
 {
     None,
     NormalSeed,
-    TankSeed
+    TankSeed,
+    Weapon
 }
 
 public class Collectable : MonoBehaviour
 {
-    public CollectableType collectableType;
     PlayerManager player;
+
+    public CollectableType collectableType;
+    public Sprite icon;
 
     private void Start()
     {
@@ -23,7 +26,7 @@ public class Collectable : MonoBehaviour
     {
         if (player)
         {
-            player.inventory.Add(collectableType);
+            player.inventory.Add(this);
             Destroy(this.gameObject);
         }
     }

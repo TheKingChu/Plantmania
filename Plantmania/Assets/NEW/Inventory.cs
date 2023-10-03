@@ -11,6 +11,7 @@ public class Inventory
         public CollectableType collectableType;
         public int count;
         public int maxStack;
+        public Sprite icon;
 
         //constructer for slot class
         public Slot()
@@ -31,9 +32,10 @@ public class Inventory
             return false;
         }
 
-        public void AddItem(CollectableType collectableType)
+        public void AddItem(Collectable item)
         {
-            this.collectableType = collectableType;
+            this.collectableType = item.collectableType;
+            this.icon = item.icon;
             count++;
         }
     }
@@ -50,14 +52,14 @@ public class Inventory
         }
     }
 
-    public void Add(CollectableType typeToAdd)
+    public void Add(Collectable itemToAdd)
     {
         //if there already is a item of that type add to the stack
         foreach (Slot slot in slots)
         {
-            if(slot.collectableType == typeToAdd && slot.IsCollectable())
+            if(slot.collectableType == itemToAdd.collectableType && slot.IsCollectable())
             {
-                slot.AddItem(typeToAdd);
+                slot.AddItem(itemToAdd);
                 return;
             }
         }
@@ -67,7 +69,7 @@ public class Inventory
         {
             if(slot.collectableType == CollectableType.None)
             {
-                slot.AddItem(typeToAdd);
+                slot.AddItem(itemToAdd);
                 return;
             }
         }
