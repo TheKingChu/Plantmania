@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
 
         tileManager = GetComponent<TileManager>();
         itemManager = GetComponent<ItemManager>();

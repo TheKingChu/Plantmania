@@ -167,9 +167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b78aed6f4da517448a618c04d2ba533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotID: 0
+  inventory:
+    slots: []
   itemIcon: {fileID: 3011175162953783165}
   quantityText: {fileID: 6320861643262902057}
-  slotID: 0
   highlight: {fileID: 2943716618297730770}
 --- !u!114 &7736873274896622158
 MonoBehaviour:
@@ -193,6 +195,10 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+  - eventID: 6
     callback:
       m_PersistentCalls:
         m_Calls: []
