@@ -1588,7 +1588,7 @@ GameObject:
   - component: {fileID: 318466797}
   - component: {fileID: 318466796}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: InventoryCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15548,6 +15548,37 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &927614380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 927614381}
+  m_Layer: 0
+  m_Name: SpawnLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &927614381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927614380}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.59, y: 4.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &943796368
 GameObject:
   m_ObjectHideFlags: 0
@@ -18237,6 +18268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1364168727}
+  - component: {fileID: 1364168728}
   m_Layer: 0
   m_Name: WaveSpawner
   m_TagString: Untagged
@@ -18259,6 +18291,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1364168728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364168726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e022071509bc1864b95743a5bf12d082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - enemyPrefab: {fileID: 7733715498287362875, guid: ad13b6d548cb04e49a64b821eb0c3def, type: 3}
+    cost: 1
+  - enemyPrefab: {fileID: 4135615961102372159, guid: 4f3addb4c4e461c4d9221dcf86eeb459, type: 3}
+    cost: 2
+  currentWave: 1
+  waveValue: 0
+  enemiesToSpawn: []
+  spawnlocation: {fileID: 927614381}
+  waveDuration: 20
 --- !u!1001 &1503347101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20997,6 +21051,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2286277598164624634, guid: 9e0260c7afef3f14a815dc1cd59f731b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286277598164624634, guid: 9e0260c7afef3f14a815dc1cd59f731b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2422842736395342507, guid: 9e0260c7afef3f14a815dc1cd59f731b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -21684,6 +21746,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1608916356}
+  - {fileID: 1364168727}
+  - {fileID: 927614381}
   - {fileID: 2132328505}
   - {fileID: 288469130}
   - {fileID: 5413267421462025929}
@@ -21694,4 +21758,3 @@ SceneRoots:
   - {fileID: 1203298392}
   - {fileID: 7715795063514094844}
   - {fileID: 5247539393033532115}
-  - {fileID: 1364168727}
