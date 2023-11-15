@@ -22,12 +22,13 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
-        //DontDestroyOnLoad(this.gameObject);
 
         tileManager = GetComponent<TileManager>();
         itemManager = GetComponent<ItemManager>();
         uiManager = GetComponent<UIManager>();
 
         playerManager = FindObjectOfType<PlayerManager>();
+
+        DontDestroyOnLoad(this.gameObject);
     }
 }

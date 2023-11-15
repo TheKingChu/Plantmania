@@ -47,11 +47,13 @@ public class UIManager : MonoBehaviour
         {
             if (!inventoryPanel.activeSelf)
             {
+                Time.timeScale = 0f;
                 inventoryPanel.SetActive(true);
                 RefreshInventoryUI("Backpack");
             }
             else
             {
+                Time.timeScale = 1.0f;
                 inventoryPanel.SetActive(false);
             }
         }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Slot
   - Enemy
+  - Back
+  - tileInteractable
   layers:
   - Default
   - TransparentFX
